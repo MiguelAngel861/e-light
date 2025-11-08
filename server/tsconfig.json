@@ -1,0 +1,15 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": false, // ← Inicia con strict false para migración gradual
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowJs": true // ← Permite archivos .js y .ts coexistiendo
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
