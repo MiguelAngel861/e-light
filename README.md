@@ -12,7 +12,6 @@ La atención al detalle en la **experiencia de usuario (UX)** es crucial para di
 - ⭐ **Sección de reseñas de productos**.  
 
 ### 🛠️ Stack Sugerido
-- **Frontend:** [Ionic](https://ionicframework.com/) con **Angular**.  
+- **Frontend:** [Ionic](https://ionicframework.com/) con **React**.  
 - **Backend:** [Express.js](https://expressjs.com/) para una arquitectura ligera y escalable en Node.js.  
-- **Base de Datos:** [PostgreSQL](https://www.postgresql.org/).  
-- **Pagos:** [Stripe API](https://stripe.com/).  
+- **Base de Datos:** [MySQL](https://www.postgresql.org/).  
