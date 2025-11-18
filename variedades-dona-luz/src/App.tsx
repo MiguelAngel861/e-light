@@ -5,6 +5,9 @@ import { IonReactRouter } from '@ionic/react-router';
 /* Importando las paginas al App.tsx */
 import Home from './pages/Home';
 import Cart from './pages/Cart';
+import SignUp from './pages/SignUp';
+import Profile from './pages/Profile';
+import Admin from './pages/Admin';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -51,8 +54,17 @@ const App: React.FC = () => (
         <Route exact path="/cart">
           <Cart />
         </Route>
+        <Route exact path="/SignUp">
+          <SignUp />
+        </Route>
+        <Route exact path="/Profile">
+          <Profile />
+        </Route>
+        <Route exact path="/Admin">
+          <Admin />
+        </Route>
         <Route exact path="/">
-          <Redirect to="/home" />
+          <Redirect to="/SignUp" />
         </Route>
 
       </IonRouterOutlet>
