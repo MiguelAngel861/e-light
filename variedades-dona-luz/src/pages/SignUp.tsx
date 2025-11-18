@@ -260,29 +260,32 @@ const SignUp: React.FC = () => {
                         )}
                       </div>
                     </IonCol>
+                  </IonRow>
+                  <IonRow className=''>
                     <IonCol>
-                      <div className="space-y-2">
-                        <IonItem 
-                          className="ion-no-padding rounded-2xl border-2 border-gray-200 focus-within:border-emerald-400 transition-all duration-200 custom-input-item"
-                          lines="none"
-                        >
-                          <IonInput
-                            type="text"
-                            placeholder="Apellido"
-                            value={formData.lastName}
-                            onIonInput={(e) => handleInputChange('lastName', e.detail.value!)}
-                            className="custom-input bg-white text-gray-800 text-lg font-medium placeholder-gray-400"
-                          />
-                        </IonItem>
-                        {errors.lastName && (
-                          <IonNote color="danger" className="text-sm font-medium pl-4">
-                            {errors.lastName}
-                          </IonNote>
-                        )}
-                      </div>
                     </IonCol>
                   </IonRow>
                 </IonGrid>
+
+                <div className="space-y-2">
+                  <IonItem 
+                  className="ion-no-padding rounded-2xl border-2 border-gray-200 focus-within:border-emerald-400 transition-all duration-200 custom-input-item"
+                  lines="none"
+                  >
+                  <IonInput
+                  type="text"
+                  placeholder="Apellido"
+                  value={formData.lastName}
+                  onIonInput={(e) => handleInputChange('lastName', e.detail.value!)}
+                  className="custom-input bg-white text-gray-800 text-lg font-medium placeholder-gray-400"
+                  />
+                  </IonItem>
+                    {errors.lastName && (
+                       <IonNote color="danger" className="text-sm font-medium pl-4">
+                      {errors.lastName}
+                    </IonNote>
+                    )}
+                </div>
 
                 {/* Email */}
                 <div className="space-y-2">
