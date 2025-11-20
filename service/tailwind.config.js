@@ -1,5 +1,7 @@
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/@ionic/**/*.{js,ts}"
+  ],
   theme: {
     extend: {
       colors: {

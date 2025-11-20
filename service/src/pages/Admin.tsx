@@ -1,15 +1,15 @@
 // src/pages/Admin.tsx
 import React, { useState } from 'react';
-import { 
-  IonContent, IonButton, IonIcon, IonItem, IonLabel, IonInput, 
-  IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonGrid, 
-  IonRow, IonCol, IonAlert, IonLoading, IonBadge, IonChip, 
-  IonSelect, IonSelectOption, IonSearchbar, IonSegment, 
+import {
+  IonContent, IonButton, IonIcon, IonItem, IonLabel, IonInput,
+  IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonGrid,
+  IonRow, IonCol, IonAlert, IonLoading, IonBadge, IonChip,
+  IonSelect, IonSelectOption, IonSearchbar, IonSegment,
   IonSegmentButton, IonList, IonThumbnail, IonToggle,
   IonModal, IonHeader, IonToolbar, IonTitle, IonTextarea,
   IonDatetime, IonFooter, IonProgressBar
 } from '@ionic/react';
-import { 
+import {
   arrowBack, analyticsOutline, bagHandleOutline, peopleOutline,
   cashOutline, trendingUpOutline, alertCircleOutline, checkmarkCircleOutline,
   addOutline, searchOutline, filterOutline, downloadOutline,
@@ -254,13 +254,13 @@ const Admin: React.FC = () => {
       `}</style>
 
       <div className="min-h-screen bg-gray-50">
-        
+
         {/* Header */}
         <div className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-40">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center">
-                <IonButton 
+                <IonButton
                   onClick={() => history.push('/home')}
                   fill="clear"
                   className="text-forest-green font-semibold"
@@ -320,7 +320,7 @@ const Admin: React.FC = () => {
 
         {/* Main Content */}
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          
+
           {/* Dashboard Segment */}
           {activeSegment === 'dashboard' && (
             <div className="space-y-6">
@@ -472,7 +472,7 @@ const Admin: React.FC = () => {
                       className="custom-searchbar white-bg"
                     />
                   </div>
-                  
+
                   <div className="overflow-x-auto white-bg">
                     <table className="w-full white-bg">
                       <thead className="bg-gray-50">
@@ -565,7 +565,7 @@ const Admin: React.FC = () => {
           {activeSegment === 'orders' && (
             <div className="space-y-6">
               <h2 className="text-2xl font-bold text-forest-green">Gestión de Pedidos</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {recentOrders.map((order) => (
                   <IonCard key={order.id} className="rounded-2xl shadow-lg white-bg">
@@ -609,7 +609,7 @@ const Admin: React.FC = () => {
           {activeSegment === 'customers' && (
             <div className="space-y-6">
               <h2 className="text-2xl font-bold text-forest-green">Gestión de Clientes</h2>
-              
+
               <IonCard className="rounded-2xl shadow-lg white-bg">
                 <IonCardContent className="p-6 white-bg">
                   <div className="text-center py-12">
@@ -648,22 +648,22 @@ const Admin: React.FC = () => {
           <div className="space-y-4">
             <IonItem className="white-bg">
               <IonLabel position="stacked">Nombre del Producto</IonLabel>
-              <IonInput 
+              <IonInput
                 value={selectedProduct?.name || ''}
                 placeholder="Ej: Sneakers Urbanos"
                 className="white-bg"
               />
             </IonItem>
-            
+
             <IonItem className="white-bg">
               <IonLabel position="stacked">SKU</IonLabel>
-              <IonInput 
+              <IonInput
                 value={selectedProduct?.sku || ''}
                 placeholder="Ej: SNK-001"
                 className="white-bg"
               />
             </IonItem>
-            
+
             <IonItem className="white-bg">
               <IonLabel position="stacked">Categoría</IonLabel>
               <IonSelect value={selectedProduct?.category || 'Calzado'} className="white-bg">
@@ -673,30 +673,30 @@ const Admin: React.FC = () => {
                 <IonSelectOption value="Formal">Formal</IonSelectOption>
               </IonSelect>
             </IonItem>
-            
+
             <IonItem className="white-bg">
               <IonLabel position="stacked">Precio</IonLabel>
-              <IonInput 
+              <IonInput
                 type="number"
                 value={selectedProduct?.price || ''}
                 placeholder="0.00"
                 className="white-bg"
               />
             </IonItem>
-            
+
             <IonItem className="white-bg">
               <IonLabel position="stacked">Stock</IonLabel>
-              <IonInput 
+              <IonInput
                 type="number"
                 value={selectedProduct?.stock || ''}
                 placeholder="0"
                 className="white-bg"
               />
             </IonItem>
-            
+
             <IonItem className="white-bg">
               <IonLabel position="stacked">Stock Mínimo</IonLabel>
-              <IonInput 
+              <IonInput
                 type="number"
                 value={selectedProduct?.minStock || ''}
                 placeholder="0"
