@@ -1,0 +1,7 @@
+{
+  "name": "variedades-dona-luz",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
