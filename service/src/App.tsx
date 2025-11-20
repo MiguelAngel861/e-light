@@ -8,6 +8,9 @@ import Cart from './pages/Cart';
 import SignUp from './pages/SignUp';
 import Profile from './pages/Profile';
 import Admin from './pages/Admin';
+import Checkout from './pages/Checkout';
+import Payment from './pages/Payment';
+import OrderSuccess from './pages/OrderSuccess';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -60,6 +63,15 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/Admin">
           <Admin />
+        </Route>
+        <Route exact path="/checkout">
+          <Checkout />
+        </Route>
+        <Route exact path="/payment">
+          <Payment />
+        </Route>
+        <Route exact path="/order-success">
+          <OrderSuccess />
         </Route>
         <Route exact path="/">
           <Redirect to="/SignUp" />
